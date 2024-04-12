@@ -29,21 +29,20 @@ def write_on_file(user_name, user_password):
 
 # join all the pieces together
           
-def process_user_info():
+def create_account():
      #acess the the second element of the list which will always be list in this context
      #also acess the user name to use later
-     pas = get_user_input()[1]
-     username = get_user_input()[0]
+     username, pas = get_user_input()
      
      #encrypt the retrived password from the list
      encrypted_pas = encrypt_pass(pas)
 
 
      #write pass the data into the file
-     write_on_file(username, pas)
+     write_on_file(username, encrypted_pas)
 
 
 
 #test our porcess_user_info funtion
 
-process_user_info()
+create_account()
